@@ -1,0 +1,172 @@
+\documentclass[fyma,pdf,final]{prosper}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{picture}
+\usepackage{graphics}
+\usepackage{listings}
+
+
+\slideCaption{\textit{WWW}}
+\DefaultTransition{Wipe}
+
+\begin{document}
+	\title{WWW}
+	\subtitle{Vývoj webových stránek}
+	\author{Marek Schauer}
+	\email{xschau00@stud.fit.vutbr.cz}
+	\institution{Vysoké učení technické v~Brně\\Fakulta informačních technologií}
+	\maketitle
+
+	\begin{slide}{Proč se naučit vyvýjet weby?}
+		\begin{itemize}
+			\item Po tvorbě webových stránek je neustálá poptávka - když se weby naučíte dělat dobře, o obživu můžete mít postaráno
+			\item Naučit se tvořit weby dobře nemusí být nic těžého
+			\item Kdy radši vývoj webu nechat na odborníky?
+				\begin{itemize}
+					\item Když Vaše firma potřebuje profesionální web - zvládnutí všech webových technologií by Vás jako majitele firmy mohlo stát spoustu času
+				\end{itemize}
+
+		\end{itemize}
+	\end{slide}
+
+	\begin{slide}{Webový vývojář včera a dnes}
+		\begin{itemize}
+			\item V minulosti nebylo výjimkou, že celý web dělal 1 člověk.
+			\item Dnes je však situace poměrně odlišná. Počas vývoje internetu a webových stránek se vytvořily 2 hlavní větvy webového vývoje, kterým se může vývojář vydat:
+				\begin{itemize}
+					\item Frontend developer - implementuje uživatelské části webu
+					\item Backend developer - zajišťuje správný chod webové aplikace na pozadí, která zvyčejně beží na serveru
+				\end{itemize}
+			\item Tímto dělením se však výčet profesí spojených s webovým vývojem nekončí. Svoje uplatnění mají také:
+				\begin{itemize}
+					\item Grafik - navrhuje dizajn webu
+					\item Copywriter - píše poutavé texty pro webovou prezentaci
+					\item Webový konzultant - definuje, co přesně zákazník potřebuje a pomáhá mu uvědomit si, co je pro něho při vytváření webu důležité
+				\end{itemize}
+		\end{itemize}
+	\end{slide}
+
+	\begin{slide}{Základní technologie spojené s tvorbou webu}
+		Základem všech webů jsou tyto jazyky:
+		\begin{itemize}
+			\item HTML
+				\begin{itemize}
+					\item značkovací jazyk, používa se pro obsahovou stránku webové prezentace
+					\item nejnovější verze je HTML 5
+				\end{itemize}
+			\item CSS
+				\begin{itemize}
+					\item jazyk spojený s vizuální částí webu
+					\item nejnovější verze CSS je 3
+
+				\end{itemize}
+		\end{itemize}
+		Základem každého webového vývojáře musí být perfektní znalost HTML a CSS.
+	\end{slide}
+
+	\begin{slide}{Programovací jazyky}
+	S vývojem webových stránek se pojí také programovací jazyky.
+		\begin{itemize}
+			\item JavaScript
+				\begin{itemize}
+					\item programovací jazyk, který na základnějších webových prezentacích dopomáhá spíše k vizuální stránce
+					\item při rozsáhlejších webových projektech může hrát i významnější funkční roli
+					\item vykonává se v prohlížeči uživetele
+				\end{itemize}
+			\item PHP
+				\begin{itemize}
+					\item programovací jazyk, který slouží k dynamickému generování webových stránek
+					\item na rozdil od JavaScriptu se vykonává na serveru, kde je webová stránka uložena
+				\end{itemize}
+		\end{itemize}
+	\end{slide}
+
+
+	\begin{slide}{HTML}
+		\begin{itemize}
+			\item HTML je zkratka pro Hypertext Markup Language
+			\item je složen ze značek v ostrých závorkách, které určují smysl a vzhled dokumentu
+				\begin{itemize}
+					\item tímto značkám se říká tagy
+				\end{itemize}
+			\item Každá webová stránka je tvořená HTML dokumentem, který má nasledující nebo podobnou strukturu:
+		\end{itemize}
+\begin{lstlisting}[frame=single]  % Start your code-block
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+   </head>
+   <body>
+
+   </body>
+</html>
+\end{lstlisting}
+	\end{slide}
+
+	\begin{slide}{CSS}
+		\begin{itemize}
+			\item CSS je zkratka pro Cascading Stylesheets
+			\item jde o stylový předpis, který definuje, jak webová stránka vypadá
+			\item důvodem vzniku CSS je oddělení vizuální a obsahové části webu
+				\begin{itemize}
+					\item v minulosti se obě tyto části psali v HTML
+				\end{itemize}
+			\item CSS kód má následující syntax:
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+selektor {
+   vlastnost: hodnota;
+}
+\end{lstlisting}
+
+		\end{itemize}
+	\end{slide}
+		
+	\begin{slide}{V čem se weby píšou?}
+		Webové stránky se píšou v textových editorech, zde je několik příkladů:
+		\begin{itemize}
+			\item NotePad
+			\item Sublime Text
+				\begin{itemize}
+					\item výhodou je rychlost, pružnost, Package Controller
+				\end{itemize}
+			\item Adobe Dreamweaver
+				\begin{itemize}
+					\item obsahuje i WYSIWYG
+				\end{itemize}
+		\end{itemize}
+	\end{slide}
+	
+
+	\begin{slide}{Responzivita}
+		\begin{itemize}
+			\item přizpůsobení zobrazení webu všem platformám
+			\item implementuje se pomocí tzv. mediaqueries
+				\begin{itemize}
+					\item založeno na definici CSS vlastností pro vymezené rozlišení
+				\end{itemize}
+			\item ukázka stylování pomocí mediaqueries:
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+@media only screen and (max-width: 500px) {
+   body {
+       background-color: lightblue;
+   }
+}
+\end{lstlisting}
+		\end{itemize}
+	\end{slide}
+	\begin{slide}{Ukázka responzivity}
+		\begin{figure}[h]
+			\begin{center}
+		        \includegraphics{resp.eps}
+			    \caption{Ukázka responzivity}
+			    \label{pic:responsivity}
+			\end{center}
+		\end{figure}
+	\end{slide}
+		
+\end{document}

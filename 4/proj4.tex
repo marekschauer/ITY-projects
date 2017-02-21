@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\bibliographystyle{czplain}
+
+%uvozovky
+\providecommand{\uv}[1]{\quotedblbase #1\textquotedblleft}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    {\LARGE\textsc{Vysoké učení technické v~Brně}}\\
+    \smallskip
+    {\Large\textsc{Fakulta informačních technologií}}\\
+    \bigskip
+    \vspace{\stretch{0.382}} %poměry odpovídající zlatému řezu    
+    \LARGE{Typografie a publikování\,--\,4.\,projekt}\\
+    \smallskip
+    \Huge{Bibliografické citace}\\
+    \vspace{\stretch{0.618}}
+\end{center}
+    {\Large Marek Schauer \hfill \today }
+\end{titlepage}
+
+\section{Typografie}
+Na začátek je vhodné, aby jsme si definovali, co to vlastně typografie je.
+
+\uv{\emph{Typografie je umělecko-technický obor, který se zabývá tiskovým písmem. Dělí se na mikrotypografii a makrotypografii. Mikrotypografie se zabývá uměleckou tvorbou písma. Makrotypografie se zabývá umístěním písma na stránku, proporcemi titulků, textů a ilustrací, v češtině se tradičně nazývá grafická úprava}} \cite{Wiki:Typografie}.
+
+
+\section{Čitelnost}
+Hlavním cílem typografie je zajištění čitelnosti textu. I velmi obsahově hodnotný text může na své hodnotě strácet právě díky špatné čitelnosti \cite{Bringhurst:The_elements_of_typhographis_style}. V dnešní moderné době plné elektroniky musíme také odlišovat čitelnost na displejích různých zařízení a na papíře. Při displejích musíme počítat s tím, že čitatel může číst naši publikaci na přímém slunci letního koupaliště nebo také v pohodlí svého domova, kde jsou ke čtení mnohem lepší podmínky \cite{Maria:On_web_typography}.
+
+\section{\TeX}
+Jednou z možností, jak se s typografii vyspořádat je nástroj zvaný \TeX. Tento nástroj oceníte například v případě, kdy potřebujete kvalitně zpracovat dokumentaci k SW produktu nebo když vlastníte nakladatelský dům, který produkuje veliké množství textů s pevnou strukturou. Naopak, jestliže potřebujete jednorázově vysázet svatební oznámení, pak pro Vás \TeX \ nemusí být zrovna ideálním pomocníkem \cite{Sojka:Par_poznamek_pro_texove_novice}.
+
+\section{\LaTeX}
+Další možností je \LaTeX. Jde v podstatě o systém maker pro \TeX \ \cite{MKS:Jak_se_v_tom_vyznat}. \LaTeX \ je velice zajímavá možnost, jak se dají profesionálně vysázet dokumenty různých typů. Důkazem jeho oblíbenosti napříč různými typy dokumentů může být i fakt, že v něm byl sepsán například Maráthsko-Anglický slovník \cite{TeX_conf:Proc}. K \LaTeX u je dostupných taky několik druhů verzovacích systémů, např. SCCS, RCS, CVS, GNU Arch a mnoho dalších \cite{Divila:Revizni_system_pro_latex}.
+\newpage
+\bibliography{literatura}
+
+\end{document}
